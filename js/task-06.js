@@ -1,10 +1,9 @@
 const valInp = document.querySelector('#validation-input');
 const funcBlur = () => {
-    valInp.classList.forEach(elem => valInp.classList.remove(elem));
     if (valInp.value.length === parseInt(valInp.dataset.length, 10)) {
-        valInp.classList.add('valid');
+        valInp.classList.replace('validation-input', 'valid');
     } else {
-        valInp.classList.add('invalid');
+        valInp.classList.replace('validation-input', 'invalid')
     }
 };
 valInp.addEventListener('blur', funcBlur);
