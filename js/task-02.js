@@ -13,3 +13,4 @@ ingredients.forEach(elem => {
   str += `<li>${elem}</li>`;
 });
 ulIngr.insertAdjacentHTML('afterbegin', str);
+ulIngr.insertAdjacentHTML('afterbegin', str);
