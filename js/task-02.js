@@ -7,10 +7,11 @@ const ingredients = [
   'Приправы',
 ];
 
-const ulIngr = document.querySelector('#ingredients');
-let str = '';
-ingredients.forEach(elem => {
-  str += `<li>${elem}</li>`;
-});
-ulIngr.insertAdjacentHTML('afterbegin', str);
-ulIngr.insertAdjacentHTML('afterbegin', str);
+const menuItem = document.getElementById('ingredients');
+const itemName = ingredients.map(ingredient => {
+  const itemList = document.createElement('li');
+  itemList.classList.add('list');
+  itemList.textContent = ingredient;
+  return itemList;
+})
+menuItem.append(...itemName);
